@@ -12,7 +12,9 @@ export default function Multimedia() {
     try {
       const data = await obtenerMultimedia();
       console.log(data.data);
-    } catch (error) {}
+    } catch (error) {
+      console.error(error);
+    }
   };
   return <div>Multimedia</div>;
 }
