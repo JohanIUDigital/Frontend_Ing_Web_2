@@ -1,7 +1,7 @@
 import { axiosConfig } from "../config/axiosConfig";
 
-const obtenerMultimedia = () => {
-  return axiosConfig.get("producciones?estado=true", {
+const obtenerMultimedia = (estado = true) => {
+  return axiosConfig.get(`producciones?activo=${estado}`, {
     headers: {
       "Content-Type": "application/json",
     },
