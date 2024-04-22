@@ -6,7 +6,7 @@ import {
 import MultiTable from "./MultiTable";
 import ErrorData from "../ui/ErrorData";
 import MultiToggle from "./MultiToggle";
-import ButtonNewM from "./ButtonNewM";
+import ButtonNewM from "./BtnNewMulti";
 import ModalMultimedia from "./ModalMultimedia";
 
 export default function Multimedia() {

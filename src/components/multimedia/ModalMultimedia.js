@@ -5,7 +5,7 @@ export default function ModalMultimedia({newMultiState,handleChange,saveMultimed
     <div
       className="modal fade"
       id="modalMultimedia"
-      tabindex="-1"
+      tabIndex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
@@ -25,7 +25,7 @@ export default function ModalMultimedia({newMultiState,handleChange,saveMultimed
           <div className="modal-body">
             <form>
               <div className="mb-3">
-                <label for="recipient-name" className="col-form-label">
+                <label htmlFor="recipient-name" className="col-form-label">
                   Título:
                 </label>
                 <input
@@ -38,7 +38,7 @@ export default function ModalMultimedia({newMultiState,handleChange,saveMultimed
                 />
               </div>
               <div className="mb-3">
-                <label for="recipient-name" className="col-form-label">
+                <label htmlFor="recipient-name" className="col-form-label">
                   Sinopsis:
                 </label>
                 <textarea
@@ -50,7 +50,7 @@ export default function ModalMultimedia({newMultiState,handleChange,saveMultimed
                 ></textarea>
               </div>
               <div className="mb-3">
-                <label for="recipient-name" className="col-form-label">
+                <label htmlFor="recipient-name" className="col-form-label">
                   Tipo:
                 </label>
                 <input
@@ -63,7 +63,7 @@ export default function ModalMultimedia({newMultiState,handleChange,saveMultimed
                 />
               </div>
               <div className="mb-3">
-                <label for="recipient-name" className="col-form-label">
+                <label htmlFor="recipient-name" className="col-form-label">
                   Género:
                 </label>
                 <input
@@ -76,7 +76,7 @@ export default function ModalMultimedia({newMultiState,handleChange,saveMultimed
                 />
               </div>
               <div className="mb-3">
-                <label for="recipient-name" className="col-form-label">
+                <label htmlFor="recipient-name" className="col-form-label">
                   Director:
                 </label>
                 <input
@@ -89,7 +89,7 @@ export default function ModalMultimedia({newMultiState,handleChange,saveMultimed
                 />
               </div>
               <div className="mb-3">
-                <label for="recipient-name" className="col-form-label">
+                <label htmlFor="recipient-name" className="col-form-label">
                   Productora:
                 </label>
                 <input
