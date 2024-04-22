@@ -1,10 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           Multimedia
         </a>
         <button
@@ -20,26 +21,21 @@ export default function NavBar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Géneros
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Directores
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Productoras
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Tipos
-              </a>
-            </li>
+            <NavLink to={"/Generos"} className="nav-link">
+              Géneros
+            </NavLink>
+
+            <NavLink to={"/Directores"} className="nav-link">
+              Directores
+            </NavLink>
+
+            <NavLink to={"/Productoras"} className="nav-link">
+              Productoras
+            </NavLink>
+
+            <NavLink to={"/Tipos"} className="nav-link">
+              Tipos
+            </NavLink>
           </ul>
         </div>
       </div>

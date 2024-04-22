@@ -11,8 +11,10 @@ export default function ThMultiTable() {
         <th scope="col">Género</th>
         <th scope="col">Director</th>
         <th scope="col">Productora</th>
-        <th scope="col">Fecha de Creación</th>
+        <th scope="col">Fecha</th>
         <th scope="col">Estado</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
       </tr>
     </thead>
   );

@@ -1,13 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { obtenerMultimedia } from "../../services/MultimediaService";
+import {
+  crearMultimedia,
+  obtenerMultimedia,
+} from "../../services/MultimediaService";
 import MultiTable from "./MultiTable";
 import ErrorData from "../ui/ErrorData";
 import MultiToggle from "./MultiToggle";
+import ButtonNewM from "./ButtonNewM";
+import ModalMultimedia from "./ModalMultimedia";
 
 export default function Multimedia() {
   const [MultimediaState, MultimediaStateSet] = useState([]); //hook que cambia estado, nombre de estado, funcion que activa cambio de estado
   const [MultiEstadoState, MultiEstadoStateSet] = useState(false); //hook de parametro estadoa activo/inactivo
   const [MultiErrorState, MultiErrorStateSet] = useState(false); //hook de parametro error
+  const [newMultiState, newMultiSet] = useState({
+    Titulo: "",
+    Sinopsis: "",
+    Tipo: "",
+    Genero: "",
+    Director: "",
+    Productora: "",
+    activo: true,
+  });
   //hooks
   useEffect(() => {
     getMultimedia();
@@ -26,22 +40,41 @@ export default function Multimedia() {
       MultiErrorStateSet(true);
     }
   };
+
+  /*
   
   const onChangeEstado = () => {
     MultiEstadoStateSet(!MultiEstadoState);
   };
+  */
 
-  return (
-    <>
+  const handleChange = (e) => {
+    newMultiSet({
+      ...newMultiState,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const saveMultimedia = async () => {
+    console.log("si entro saveMultimedia");
+    const { data } = await crearMultimedia(newMultiState);
+    console.log(data);
+  };
+  /* 
       <MultiToggle
         MultiEstadoState={MultiEstadoState}
         onChangeEstado={onChangeEstado}
-      ></MultiToggle>
+      />
+ */
+  return (
+    <>
       {MultiErrorState ? (
         <ErrorData />
       ) : (
         <MultiTable MultimediaState={MultimediaState} />
       )}
+      <ButtonNewM></ButtonNewM>
+      <ModalMultimedia newMultiState={newMultiState} handleChange={handleChange} saveMultimedia={saveMultimedia}></ModalMultimedia>
     </>
   );
 }

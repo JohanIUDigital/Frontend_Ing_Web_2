@@ -1,17 +1,7 @@
-import Multimedia from "./components/multimedia/Multimedia";
-import Footer from "./components/ui/Footer";
-import NavBar from "./components/ui/NavBar";
+import AppRouters from "./routers/AppRouters";
 
 function App() {
-  return (
-    <div>
-      <div className="container">
-        <NavBar/>
-        <Multimedia></Multimedia>
-      </div>
-        <Footer/>
-    </div>
-  );
+  return <AppRouters></AppRouters>;
 }
 
 export default App;

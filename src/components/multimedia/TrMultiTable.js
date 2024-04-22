@@ -13,6 +13,8 @@ export default function TrMultiTable({multi,index}) {
         <td>{multi.productora}</td>
         <td>{Dayjs(multi.fechaCreacion).format("DD/MM/YYYY")}</td>
         <td>{multi.activo ? "Activo" : "Inactivo"}</td>
+        <td><button type="button" className="btn btn-primary btn-sm">Editar</button></td>
+        <td><button type="button" className="btn btn-secondary btn-sm">Eliminar</button></td>
       </tr>
   );
 }
