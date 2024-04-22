@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function ModalDirector({newDirectorState, handleChange, saveDirector}) {
+export default function ModalProductora({newProductoraState, handleChange, saveProductora}) {
   return (
     <div
       className="modal fade"
-      id="modalDirector"
+      id="modalProductora"
       tabIndex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -13,7 +13,7 @@ export default function ModalDirector({newDirectorState, handleChange, saveDirec
         <div className="modal-content">
           <div className="modal-header">
             <h1 className="modal-title fs-5" id="exampleModalLabel">
-              Nuevo Director
+              Nueva Productora
             </h1>
             <button
               type="button"
@@ -26,19 +26,6 @@ export default function ModalDirector({newDirectorState, handleChange, saveDirec
             <form>
               <div className="mb-3">
                 <label htmlFor="recipient-name" className="col-form-label">
-                  Cédula:
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="recipient-cedula"
-                  name="cedula"
-                  value={newDirectorState.cedula}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="recipient-name" className="col-form-label">
                   Nombre:
                 </label>
                 <input
@@ -46,9 +33,34 @@ export default function ModalDirector({newDirectorState, handleChange, saveDirec
                   className="form-control"
                   id="recipient-nombre"
                   name="nombre"
-                  value={newDirectorState.nombre}
+                  value={newProductoraState.nombre}
                   onChange={handleChange}
                 />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="recipient-name" className="col-form-label">
+                  Slogan:
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="recipient-slogan"
+                  name="slogan"
+                  value={newProductoraState.slogan}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="recipient-name" className="col-form-label">
+                  Descripción:
+                </label>
+                <textarea
+                  className="form-control"
+                  id="recipient-descripcion"
+                  name="descripcion"
+                  value={newProductoraState.descripcion}
+                  onChange={handleChange}
+                ></textarea>
               </div>
               <div className="modal-footer">
                 <button
@@ -61,7 +73,7 @@ export default function ModalDirector({newDirectorState, handleChange, saveDirec
                 <button
                   type="submit"
                   className="btn btn-primary"
-                  onClick={saveDirector}
+                  onClick={saveProductora}
                 >
                   Crear
                 </button>
